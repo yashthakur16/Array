@@ -1,0 +1,48 @@
+#include<iostream>
+using namespace std;
+
+int maxvalue(int array[],int n)
+{
+    int max=INT16_MIN;
+    for (int i=0;i<n;i++)
+    {
+        if(max<array[i])
+        {
+            max=array[i];
+        }
+
+    }
+
+    return max;
+}
+
+int minvalue(int array[],int n)
+{
+    int min=INT16_MAX;
+    for (int i=0;i<n;i++)
+    {
+        if(min>array[i])
+        {
+            min=array[i];
+        }
+
+    }
+
+    return min;
+}
+
+int main()
+{
+    int array[10],n;
+    cout<<"Number of elements to be inserted : ";
+    cin>>n;
+    for (int i=0;i<n;i++)
+    {
+        cin>>array[i];
+    }
+
+    cout<<"Maximum Value is "<<maxvalue(array,n)<<endl;
+    cout<<"Minimum Value is "<<minvalue(array,n);
+
+    return 0;
+}
