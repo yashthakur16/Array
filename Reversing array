@@ -1,0 +1,35 @@
+#include<iostream>
+using namespace std;
+
+void reversearray(int arr[],int n)
+{
+    int start=0;
+    int end=n-1;
+
+    while(start<end)
+    {
+        swap(arr[start],arr[end]);
+        start=start+1;
+        end=end-1;
+    }
+
+    for(int i=0;i<11;i++)
+    {
+        cout<<arr[i]<<" ";
+    }
+
+}
+
+int main()
+{
+    int arr[11]={56,43,1,4,76,44,65,46,26,75,32};
+    cout<<"Original Array :  ";
+    for(int i=0;i<11;i++)
+    {
+        cout<<arr[i]<<" ";
+    }
+    cout<<endl;
+    reversearray(arr,11);
+
+
+}
